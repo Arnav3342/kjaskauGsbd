@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tenth CBSE 2026 – Test Series</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+:root{
+  --primary:#0d6efd;
+  --secondary:#20c997;
+  --accent:#ff9800;
+  --bg:#f4f6f8;
+  --card:#ffffff;
+  --text:#212529;
+  --muted:#6c757d;
+  --border:#dee2e6;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* HEADER */
+header{
+  background:var(--card);
+  border-bottom:1px solid var(--border);
+  padding:18px 0;
+  box-shadow:0 4px 10px rgba(0,0,0,0.06);
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:0 20px;
+}
+
+.brand{
+  font-size:26px;
+  font-weight:800;
+  color:var(--primary);
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* MAIN */
+main{
+  padding:50px 0;
+}
+
+.test-card{
+  background:var(--card);
+  border-radius:14px;
+  padding:30px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  border-left:8px solid var(--primary);
+}
+
+.test-title{
+  font-size:24px;
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  margin-bottom:15px;
+  color:var(--muted);
+}
+
+.meta span{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.subjects{
+  display:flex;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.subject{
+  background:rgba(13,110,253,0.1);
+  color:var(--primary);
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:14px;
+}
+
+.start-btn{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:14px 28px;
+  font-size:16px;
+  font-weight:700;
+  border-radius:30px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.start-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* TELEGRAM POPUP */
+#tgOverlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+#tgPopup{
+  background:#fff;
+  width:90%;
+  max-width:380px;
+  border-radius:14px;
+  padding:25px;
+  text-align:center;
+  animation:pop 0.3s ease;
+}
+
+@keyframes pop{
+  from{transform:scale(0.8);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+
+#tgPopup img{
+  width:70px;
+  margin-bottom:15px;
+}
+
+#tgPopup h2{
+  margin-bottom:10px;
+}
+
+#tgPopup p{
+  color:#555;
+  margin-bottom:20px;
+}
+
+.tg-btn{
+  display:block;
+  background:#0088cc;
+  color:#fff;
+  padding:12px;
+  border-radius:30px;
+  font-weight:700;
+  text-decoration:none;
+  margin-bottom:10px;
+}
+
+.skip-btn{
+  background:#e9ecef;
+  color:#333;
+  border:none;
+  padding:10px;
+  width:100%;
+  border-radius:30px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- TELEGRAM POPUP -->
+<div id="tgOverlay">
+  <div id="tgPopup">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3ZLRmwDFMqjuwsKlj2J-W_0hHTzdCkU3QkA&s">
+    <h2>Join our Telegram</h2>
+    <p>Get Class 10 CBSE notes, tests & updates instantly</p>
+    <a class="tg-btn" href="https://t.me/Tenth_CBSE" target="_blank">Join Telegram Channel</a>
+    <button class="skip-btn" onclick="closePopup()">Continue to Site</button>
+  </div>
+</div>
+
+<header>
+  <div class="container">
+    <div class="brand">
+      <i class="fas fa-book"></i>
+      Tenth CBSE 2026
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="test-card">
+      <div class="test-title">Board Objective Test 01</div>
+
+      <div class="meta">
+        <span><i class="fas fa-question-circle"></i> 24 Questions</span>
+        <span><i class="fas fa-award"></i> 96 Marks</span>
+        <span><i class="fas fa-clock"></i> 60 Minutes</span>
+      </div>
+
+      <div class="subjects">
+        <div class="subject">Physics</div>
+        <div class="subject">Chemistry</div>
+        <div class="subject">Maths</div>
+      </div>
+
+      <button class="start-btn" onclick="startTest()">Start Test</button>
+    </div>
+  </div>
+</main>
+
+<script>
+function closePopup(){
+  document.getElementById('tgOverlay').style.display='none';
+}
+
+function startTest(){
+  window.location.href = "kajd.html";
+}
+</script>
+
+</body>
+</html>
